@@ -6,9 +6,9 @@ if ($browser || preg_match('/(bot|spider|yahoo)/i', $_SERVER["HTTP_USER_AGENT"])
   echo "";
 } else {
   $host = 'localhost';
-  $dbname = 'meagles_engine';
-  $username = 'root';
-  $password = 'f8C1y1q8U7g4I4I';
+  $dbname = '';
+  $username = '';
+  $password = '';
   $dsn = "mysql:host=$host;dbname=$dbname";
 
   $pdo = new PDO($dsn, $username, $password);
@@ -742,7 +742,7 @@ echo '				</div>
 	<?php	
 
 	 try {
-        $bdd = new PDO('mysql:host=localhost;dbname=meagles_engine', 'root', 'f8C1y1q8U7g4I4I');
+        $bdd = new PDO('mysql:host=localhost;dbname=', '', '');
   }
    catch (Exception $e) {
         die('Erreur : '.$e->getMessage());
@@ -774,7 +774,7 @@ foreach ($wordsto as $wordto) {
 }
 	 
 	  try {
-        $bdd = new PDO('mysql:host=localhost;dbname=meagles_engine', 'root', 'f8C1y1q8U7g4I4I');
+        $bdd = new PDO('mysql:host=localhost;dbname=', '', '');
   }
    catch (Exception $e) {
         die('Erreur : '.$e->getMessage());
